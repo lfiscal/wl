@@ -1,3 +1,9 @@
+$(document).keypress(function(e){
+if ( e.metaKey && ( e.which === 13 ) ) {
+	$('#navigation-wrapper > button:nth-child(5)').click();
+  console.log( "You pressed CMD + Ent" );
+}
+});
 if (counter) throw counter.init(), "resetting";
 
 var counter = {
