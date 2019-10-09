@@ -22,9 +22,11 @@ function pad(val) {
 
 
 $(document).keypress(function(e){
+str = $('textarea').val();
+$('textarea').val(str.charAt(0).toUpperCase() + str.substr(1).toLowerCase())
+
 if ( e.metaKey && ( e.which === 13 ) ) {
 	$('#navigation-wrapper > button:nth-child(5)').click();
-  console.log( "You pressed CMD + Ent" );
 }
 });
 if (counter) throw counter.init(), "resetting";
