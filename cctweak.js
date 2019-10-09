@@ -42,6 +42,7 @@ var counter = {
         },
         onload: function() {
             this.incr()
+	    totalSeconds = 0;
         }
     },
     s_ajaxListener = {
