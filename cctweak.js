@@ -20,7 +20,7 @@ var counter = {
         tempSend: XMLHttpRequest.prototype.send,
         callback: function() {
           console.log(this.url)
-          this.url.includes("grade") && counter.onload()
+          this.url.includes("save_grade") && counter.onload()
         }
     };
 XMLHttpRequest.prototype.open = function(e, t) {
