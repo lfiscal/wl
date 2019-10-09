@@ -20,10 +20,12 @@ function pad(val) {
   }
 }
 
+$('textarea').keypress(function(e){
+str = $(this).val();
+$(this).val(str.charAt(0).toUpperCase() + str.substr(1).toLowerCase())
+});
 
 $(document).keypress(function(e){
-str = $('textarea').val();
-$('textarea').val(str.charAt(0).toUpperCase() + str.substr(1).toLowerCase())
 
 if ( e.metaKey && ( e.which === 13 ) ) {
 	$('#navigation-wrapper > button:nth-child(5)').click();
@@ -64,3 +66,4 @@ XMLHttpRequest.prototype.open = function(e, t) {
     if (!t) t = "";
     s_ajaxListener.tempSend.apply(this, arguments), "post" == s_ajaxListener.method.toLowerCase() && (s_ajaxListener.data = e), s_ajaxListener.callback()
 }, hideParseSetting = !1, counter.init();
+
