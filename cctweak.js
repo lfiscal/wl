@@ -20,12 +20,13 @@ function pad(val) {
   }
 }
 
+
+
+$(document).keypress(function(e){
 $('textarea').keypress(function(e){
 str = $(this).val();
 $(this).val(str.charAt(0).toUpperCase() + str.substr(1).toLowerCase())
 });
-
-$(document).keypress(function(e){
 
 if ( e.metaKey && ( e.which === 13 ) ) {
 	$('#navigation-wrapper > button:nth-child(5)').click();
