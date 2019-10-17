@@ -4,13 +4,11 @@ var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
 var totalSeconds = 0;
 setInterval(setTime, 1000);
-
 function setTime() {
   ++totalSeconds;
   secondsLabel.innerHTML = pad(totalSeconds % 60);
   minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
 }
-
 function pad(val) {
   var valString = val + "";
   if (valString.length < 2) {
@@ -19,16 +17,12 @@ function pad(val) {
     return valString;
   }
 }
-
-
-
 $(document).keypress(function(e){
 if ( e.metaKey && ( e.which === 13 ) ) {
 	$('#navigation-wrapper > button:nth-child(3)').click();
 }
 });
 if (counter) throw counter.init(), "resetting";
-
 var counter = {
         docObj: $("<span contenteditable='true' tabindex='-1' style='padding: 6px 8px;border-radius:5px;border:1px solid lightgray; margin: 0px 10px;'>0</span"),
         projectName: $("#project-name").text(),
@@ -49,7 +43,6 @@ var counter = {
         tempOpen: XMLHttpRequest.prototype.open,
         tempSend: XMLHttpRequest.prototype.send,
         callback: function() {
-          console.log(this.url)
           this.url.includes("save_grade") && counter.onload()
         }
     };
@@ -62,4 +55,3 @@ XMLHttpRequest.prototype.open = function(e, t) {
     if (!t) t = "";
     s_ajaxListener.tempSend.apply(this, arguments), "post" == s_ajaxListener.method.toLowerCase() && (s_ajaxListener.data = e), s_ajaxListener.callback()
 }, hideParseSetting = !1, counter.init();
-
