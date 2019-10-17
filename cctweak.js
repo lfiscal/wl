@@ -23,14 +23,8 @@ function pad(val) {
 
 
 $(document).keypress(function(e){
-$('textarea').keypress(function(e){
-str = $(this).val();
-$(this).val(str.charAt(0).toUpperCase() + str.substr(1).toLowerCase())
-});
-
 if ( e.metaKey && ( e.which === 13 ) ) {
 	$('#navigation-wrapper > button:nth-child(3)').click();
-	
 }
 });
 if (counter) throw counter.init(), "resetting";
