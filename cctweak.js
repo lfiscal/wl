@@ -27,6 +27,7 @@ var sents = function(){
     str = first+str
 	$(this).val(str);
 }
+sents();
 });
 //End Uppercase
 
