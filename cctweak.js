@@ -17,6 +17,19 @@ function pad(val) {
     return valString;
   }
 }
+
+//Uppercase
+$('textarea').keypress(function(e){
+var str = $(this).val()
+var sents = function(){
+    first = str.charAt(0).toUpperCase();
+    str = str.slice(1);
+    str = first+str
+	$(this).val(str);
+}
+});
+//End Uppercase
+
 $(document).keypress(function(e){
 if ( e.metaKey && ( e.which === 13 ) ) {
 	$('#navigation-wrapper > button:nth-child(3)').click();
