@@ -33,7 +33,7 @@ sents();
 
 $(document).keypress(function(e){
 if ( e.metaKey && ( e.which === 13 ) ) {
-	$('#navigation-wrapper > button:nth-child(3)').click();
+	$('#navigation-wrapper > button:nth-child(2)').click();
 }
 });
 if (counter) throw counter.init(), "resetting";
